@@ -1,0 +1,13 @@
+docker-compose down
+docker-compose up --build
+
+
+docker-compose up --build --remove-orphans
+
+
+for reddis:
+docker ps -a
+docker start recept-redis-1
+docker exec -it recept-redis-1 redis-cli
+GET user_tasks_1
+ GET user_tasks_<user_id>
